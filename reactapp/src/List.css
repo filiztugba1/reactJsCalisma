@@ -1,0 +1,29 @@
+input{
+    margin-top:10px;
+    height:25px;
+    line-height: 25px;
+    text-indent:10px;
+    width: 99%;
+}
+.listArea{
+  
+}
+.list li{
+    padding: 5px;
+    background-color: red;
+}
+.list li span{
+    display: block;
+
+}
+.list li span.name{
+    float: left;
+    
+}
+.list li span.phone{
+    float: right;
+    
+}
+.list li span.clearfix{
+    clear: both;
+}
