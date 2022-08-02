@@ -10,7 +10,34 @@ import React, { Component } from 'react'
       error:''
     }
   }
-  
+  decideActivity(lat)
+  {
+    const currentMounth=new Date().getMonth();
+    if(lat<0)
+    {
+       // güney yarım küre
+       if(currentMounth>3 && currentMounth<9)
+       {
+             return "spor salonuna gidebilirsin";
+       }
+       else
+       {
+         return "yüzmeye gidebilirsin";
+       }
+    }else
+    {
+      // kuzey yarım küre
+      if(currentMounth>9 || currentMounth<3)
+      {
+            return "spor salonuna gidebilirsin";
+      }
+      else
+      {
+        return "yüzmeye gidebilirsin";
+      }
+    }
+  }
+
   render() {
 
     window.navigator.geolocation.getCurrentPosition((position) => {
@@ -37,6 +64,8 @@ import React, { Component } from 'react'
             Boylam:{longitude}
             <br/>
             enlem:{latitude}
+            <br/>
+           {this.decideActivity(latitude)}
           </div>
         )
     }
