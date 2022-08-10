@@ -17,6 +17,12 @@ code {
 .test{
   font: inherit;
 }
+.testx{
+  margin: auto;
+}
 .deneme2{
+  text-align: center;
+}
+.deneme3{
   text-align: center;
 }
