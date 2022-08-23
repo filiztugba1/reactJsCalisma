@@ -35,8 +35,7 @@ class App extends Component {
         return (
             <div className='app-container'>
                 <SearchBar onSearchImage={this.onSearchImage}/>
-                {this.state.images.length} adet resim bulundu
-                <ImageList/>
+                <ImageList images={this.state.images}/>
             </div>
         );
     }
