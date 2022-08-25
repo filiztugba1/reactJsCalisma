@@ -3,68 +3,7 @@ import {Modal,Button, Form,Row,Col} from 'react-bootstrap';
 import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
 
-export class AddDepModal extends Component {
-
-    sayfalar=[
-        {  
-            sayfaAdi:'',
-            navMenu:{
-            menuUrl:'',
-            menuName:'',
-            menuIcon:'',
-            isActive:''
-            },
-            colon:[
-                {
-                    isModal:false,
-                    className:'',
-                    style:'',
-                    header:{
-                      name:'',
-                      buttons:[
-                        {
-                            name:'',
-                            className:'',
-                            style:'',
-                            onClick:'',
-                        }
-                      ]
-                    },
-                    body:{
-                       isTableForm:'table',
-                       table:{
-                        className:'',
-                        style:'',
-                        data:[],
-                        buttons:[]
-                       },
-                       form:{
-                        submit:'',
-                        formEleman:[
-                            {
-                                className:'',
-                                style:'', 
-                                placeholder:'',
-                                type:'',
-                                data:''
-                            }
-                        ]
-                       } 
-                    },
-                    footer:{
-                        buttons:[
-                            {
-                                name:'',
-                                className:'',
-                                style:'',
-                                onClick:'',
-                            }
-                          ]
-                    }
-                }
-            ]
-    }
-    ]
+export class EditDepModal extends Component {
 
     constructor(props){
         super(props);
@@ -78,13 +17,13 @@ export class AddDepModal extends Component {
     handleSubmit(e){
         e.preventDefault();
         fetch('http://localhost:63874/api/Departments',{
-            method:'POST',
+            method:'PUT',
             headers:{
                 'Accept':'application/json; charset=utf-8',
                 'Content-Type':'application/json; charset=utf-8',
             },
             body: JSON.stringify({
-                ID:null,
+                ID:e.target.ID.value,
                 DepartmentName:e.target.DepartmentName.value
             }),
             
@@ -136,13 +75,26 @@ export class AddDepModal extends Component {
       aria-labelledby="contained-modal-title-vcenter"
       centered>
         <Modal.Header closeButton>
-          <Modal.Title>Add Department</Modal.Title>
+          <Modal.Title>Edit Department</Modal.Title>
         </Modal.Header>
         <Modal.Body>
            
                 <Row>
                     <Col sm={6}>
                         <Form onSubmit={this.handleSubmit}>
+                        <Form.Group>
+                                <Form.Label>
+                                    ID
+                                </Form.Label>
+                                <Form.Control 
+                                type="text"
+                                name="ID"
+                                disabled
+                                defaultValue={this.props.depid}
+                                placeholder='ID'
+                                />
+                            </Form.Group>
+
                             <Form.Group>
                                 <Form.Label>
                                     Departmant Name
@@ -152,10 +104,11 @@ export class AddDepModal extends Component {
                                 name="DepartmentName"
                                 required
                                 placeholder='DepartmentName'
+                                defaultValue={this.props.depname}
                                 />
                             </Form.Group>
                             <Button variant="primary" type="submit">
-                                Submit
+                                Update Department
                             </Button>
                         </Form>
                     </Col>
