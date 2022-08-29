@@ -1,0 +1,19 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    background: #eee;
+}
+
+.card img{
+    position:absolute !important;
+    top: 20px;
+    left: -100px;
+    opacity: 0,6 !important;
+}
+.card
+{
+    overflow: hidden;
+    padding-left: 80px;
+}
+
