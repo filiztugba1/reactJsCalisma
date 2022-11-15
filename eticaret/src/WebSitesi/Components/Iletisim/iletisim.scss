@@ -1,0 +1,75 @@
+:root{
+    --PrimaryColor: hsl(26,93%,50%);
+    --HoverColor: hsl(26,90%,42%);
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(0,0%,18%);
+    --textColor: hsl(240,1%,48%);
+    --whiteColorDeam: hsl(0,0%,93%);
+    --greyBg: hsl(0,0%,96%);
+    --greyText: rgb(238, 237, 237);
+    --inputColor: hsl(330,12%,97%);
+}
+.iletisim{
+    background: var(--greyBg);
+    padding: 2rem 0;
+    .secContainer{
+        gap: 1.5rem;
+        text-align: center;
+        .iletisimLogo{
+            padding-bottom: .5rem;
+
+            .logo{
+                font-weight: 500;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: .5rem;
+                   img{
+                    width: 120px;
+                    height: 37px;
+                    margin-right: 10px;
+                   }
+            }
+        }
+        .socials{
+            gap: .5rem;
+            margin: auto;
+            justify-content: center;
+            .icon{
+                font-size: 35px;
+                background: var(--PrimaryColor);
+                border-radius: 50%;
+                padding: 8px;
+                color: var(--whiteColor);
+                &:hover{
+                    background: var(--blackColor);
+                }
+            }
+        }
+        .iletisimLinks{
+            display: grid;
+            row-gap: .2rem;
+            .linkTitle{
+                padding-bottom: .5rem;
+                color: var(--blackColor);
+                font-weight: 700;
+
+            }
+            li{
+                &:hover{
+                    transform: translateX(10px);
+                    .a{
+                        color: var(--PrimaryColor);
+                        cursor: pointer;
+                    }
+                }
+            }
+            .a, .phone, .email{
+                color: var(--textColor);
+                font-size: 13px;
+                font-weight: 500;
+
+            }
+        }
+    }
+}
