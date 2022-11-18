@@ -27,7 +27,7 @@
             .title{
                 
                 color: var(--whiteColor);
-                font-size: 2rem;
+                font-size: 1.5rem;
                 font-weight: 700;
                 line-height: 2.5rem;
 
@@ -43,10 +43,18 @@
                 margin: auto;
 
             }
-            .btn{
-                padding: .6rem 1.5rem;
-                a{
+            .LoginRouter{
+                padding: .4rem 1.5rem;
+                background: var(--PrimaryColor);
+                border: none;
+                outline: none;
+                border-radius: 3rem;
+                cursor: pointer;
+                
+                .btn{
+                    font-size: 0.8rem;
                     text-decoration: none;
+                    color: #fff;
                 }
                 &:hover{
                     background: var(--HoverColor);
@@ -55,7 +63,7 @@
         }
         .Container{
             width: 70%;
-            height:25%;
+            height:30%;
             border-radius: 1rem;
             background: var(--greyBg);
             position: absolute;
@@ -69,7 +77,7 @@
                     justify-content: center;
                     
                     position: relative;
-                    height: 120px;
+                    height: 110px;
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -83,11 +91,11 @@
         .secContainer{
            .homeText{
              .title{
-                font-size: 2.5rem;
+                font-size: 2rem;
 
              }
              .subTitle{
-                font-size: 18px;
+                font-size: 14px;
              }
            }
         }
@@ -99,12 +107,12 @@
            .homeText{
            padding: 2rem 12rem;
            .title{
-            font-size:3.5rem;
+            font-size:3rem;
             margin: auto;
             line-height: 4rem;
            }
            .subTitle{
-              width: 70%;
+              width: 60%;
            }
          }
         }

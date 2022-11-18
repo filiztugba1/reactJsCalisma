@@ -83,7 +83,8 @@ li{
     padding-bottom: .5rem;
 }
 .secIntro p{
-    font-size: 13px;
+   
+    font-size: 10px;
     color: var(--textColor);
     font-weight: 500;
 }

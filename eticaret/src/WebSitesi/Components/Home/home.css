@@ -27,7 +27,7 @@
 }
 .home .secContainer .homeText .title {
   color: var(--whiteColor);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 2.5rem;
 }
@@ -41,18 +41,25 @@
   text-align: center;
   margin: auto;
 }
-.home .secContainer .homeText .btn {
-  padding: 0.6rem 1.5rem;
+.home .secContainer .homeText .LoginRouter {
+  padding: 0.4rem 1.5rem;
+  background: var(--PrimaryColor);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
 }
-.home .secContainer .homeText .btn a {
+.home .secContainer .homeText .LoginRouter .btn {
+  font-size: 0.8rem;
   text-decoration: none;
+  color: #fff;
 }
-.home .secContainer .homeText .btn:hover {
+.home .secContainer .homeText .LoginRouter:hover {
   background: var(--HoverColor);
 }
 .home .secContainer .Container {
   width: 70%;
-  height: 25%;
+  height: 30%;
   border-radius: 1rem;
   background: var(--greyBg);
   position: absolute;
@@ -66,7 +73,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 120px;
+  height: 110px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -74,10 +81,10 @@
 
 @media screen and (min-width: 556px) {
   .home .secContainer .homeText .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .home .secContainer .homeText .subTitle {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 720px) {
@@ -85,11 +92,11 @@
     padding: 2rem 12rem;
   }
   .home .secContainer .homeText .title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: auto;
     line-height: 4rem;
   }
   .home .secContainer .homeText .subTitle {
-    width: 70%;
+    width: 60%;
   }
 }/*# sourceMappingURL=home.css.map */

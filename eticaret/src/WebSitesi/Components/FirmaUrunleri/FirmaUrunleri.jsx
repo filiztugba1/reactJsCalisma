@@ -4,6 +4,7 @@ import {BsArrowLeftShort} from 'react-icons/bs';
 import {BsArrowRightShort} from 'react-icons/bs';
 import {BsDot} from 'react-icons/bs';
 
+import {Link as LinkRouter} from 'react-router-dom';
 import img1 from '../../../Assets/FirmaUrunResimleri/img1.jpeg';
 import img2 from '../../../Assets/FirmaUrunResimleri/img2.jpeg';
 import img3 from '../../../Assets/FirmaUrunResimleri/img3.jpeg';
@@ -70,7 +71,8 @@ export class FirmaUrunleri extends Component {
   render() {
 
     return (
-      <section className='firmaUrunleri section container'>
+     
+     <section id='firmaUrunleri' className='firmaUrunleri section container'>
          <div className="secContainer">
            <div className="secHeader flex">
               <div className="textDiv">
@@ -117,7 +119,9 @@ export class FirmaUrunleri extends Component {
            </div>
          </div>
          <button className='btn'>
-         <a href="#">more products</a>
+        
+         <LinkRouter className="a" to="/ecommerce">More Products</LinkRouter>
+        
        </button>
       </section>
       

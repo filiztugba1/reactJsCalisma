@@ -6,7 +6,7 @@ import web from '../../../Assets/Hakkimizda/web.png';
 export class Hakkimizda extends Component {
   render() {
     return (
-       <section className='about section'>
+       <section id='about' className='about section'>
           <div className="secContainer">
              <h2 className="title">
               Why Etiyo?

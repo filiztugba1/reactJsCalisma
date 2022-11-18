@@ -18,13 +18,18 @@
             gap: 1rem;
             .textDiv{
                 .secTitle{
-                    padding-top: 7rem;
+               
+                    padding-top: 2rem;
                     color: var(--blackColor);
-                    line-height: 1.5rem;
+                  
+                    line-height: 1rem;
                     padding-bottom: .5rem;
+                    font-size: 22px;
+                    text-align: center;
                   }
                   p{
-                    font-size: 16px;
+                   
+                    font-size: 13px;
                     color: var(--textColor);
                     font-weight: 500;
                   }
@@ -51,19 +56,32 @@
         .firmaContent{
             padding: 2rem 0;
             gap: 1rem;
+           
             .singleDestination{
+              
                 overflow: hidden;
                 border-radius: 1rem;
                 box-shadow: 0 2px 8px 2px rgba(178,178,178,0.334);
                .destImage{
-                height: 200px;
+               
+                height: 140px;
                 width: 100%;
+               
                 position: relative;
                 overflow: hidden;
                  img{
-                    height: 100%;
+                   
                     width: 100%;
-                    object-fit: cover;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    position: relative;
+                    height: 100%;
+                  
+                  
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
 
                  }
                   .overlayInfo{
@@ -81,21 +99,25 @@
                      h3{
                         color: var(--whiteColor);
                         font-weight: 600;
-
+                        font-size: 18px !important;
+                        
                      }
                      p{
                         color: var(--whiteColor);
                         opacity: .7;
-                        font-size: 13px;
+                   
+                        font-size: 11px;
 
                      }
                      .icon{
                         position: absolute;
-                        right: 10px;
+                       
+                        right: 14px;
                         bottom: 10px;
                         padding: .5rem;
                         background: var(--PrimaryColor);
-                        font-size: 2.5rem;
+                      
+                        font-size: 2.3rem;
                         border-radius: 50%;
                         color: var(--whiteColor);
                         border: 1px solid transparent;
@@ -112,9 +134,12 @@
                }
                .destFooter{
                 padding: 1rem;
+             
                  .number{
-                    font-size: 2rem;
-                    font-weight: 700;
+                  
+                  
+                    font-size: 1rem;
+                    font-weight: 600;
                     color: var(--blackColor);
                     position: relative;
                     width: max-content;
@@ -123,9 +148,11 @@
                         position: absolute;
                         background: var(--PrimaryColor);
                         top: 45%;
-                        right:-150%;
+                    
+                        right:-240%;
                         height: 5px;
-                        width: 45px;
+                     
+                        width: 40px;
                         border-radius: 1rem;
 
                     }
@@ -134,12 +161,14 @@
                     justify-content: space-between;
                     h4{
                         color: var(--blackColor);
-                        font-size: 17px;
+                      
+                        font-size: 15px;
 
                     }
                     h5{
                         color: var(--blackColor);
-                        font-size: 15px;
+                    
+                        font-size: 13px;
                        
                     }
                    
@@ -157,11 +186,21 @@
         }
     }
     .btn{
+        padding: .4rem 1.5rem;
+        background: var(--PrimaryColor);
+        border: none;
+        outline: none;
+        border-radius: 3rem;
+        cursor: pointer;
         align-items: flex-start;
         position: absolute;
+        font-size: .8rem;
         &:hover{
             background: var(--blackColor);
             color: var(--whiteColor);
+        }
+        .a{
+            text-decoration: none;
         }
     }
 

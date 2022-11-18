@@ -19,13 +19,18 @@
   gap: 1rem;
 }
 .firmaUrunleri .secContainer .secHeader .textDiv .secTitle {
-  padding-top: 7rem;
+
+  padding-top: 2rem;
   color: var(--blackColor);
-  line-height: 1.5rem;
+  
+  line-height: 1rem;
   padding-bottom: 0.5rem;
+  font-size: 22px;
+  text-align: center;
 }
 .firmaUrunleri .secContainer .secHeader .textDiv p {
-  font-size: 16px;
+ 
+  font-size: 13px;
   color: var(--textColor);
   font-weight: 500;
 }
@@ -56,16 +61,24 @@
   box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destImage {
-  height: 200px;
+ 
+  height: 140px;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destImage img {
-  height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+ 
+ 
+ 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destImage .overlayInfo {
   position: absolute;
@@ -83,19 +96,23 @@
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destImage .overlayInfo h3 {
   color: var(--whiteColor);
   font-weight: 600;
+  font-size: 18px !important;
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destImage .overlayInfo p {
   color: var(--whiteColor);
   opacity: 0.7;
-  font-size: 13px;
+ 
+  font-size: 11px;
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destImage .overlayInfo .icon {
   position: absolute;
-  right: 10px;
+ 
+  right: 14px;
   bottom: 10px;
   padding: 0.5rem;
   background: var(--PrimaryColor);
-  font-size: 2.5rem;
+ 
+  font-size: 2.3rem;
   border-radius: 50%;
   color: var(--whiteColor);
   border: 1px solid transparent;
@@ -110,8 +127,10 @@
   padding: 1rem;
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter .number {
-  font-size: 2rem;
-  font-weight: 700;
+ 
+ 
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--blackColor);
   position: relative;
   width: -webkit-max-content;
@@ -123,9 +142,11 @@
   position: absolute;
   background: var(--PrimaryColor);
   top: 45%;
-  right: -150%;
+  
+  right: -240%;
   height: 5px;
-  width: 45px;
+  
+  width: 40px;
   border-radius: 1rem;
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter .destText {
@@ -133,11 +154,13 @@
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter .destText h4 {
   color: var(--blackColor);
-  font-size: 17px;
+  
+  font-size: 15px;
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter .destText h5 {
   color: var(--blackColor);
-  font-size: 15px;
+  
+  font-size: 13px;
 }
 .firmaUrunleri .secContainer .firmaContent .singleDestination:hover .overlayInfo {
   overflow: visible;
@@ -145,12 +168,22 @@
   height: 100%;
 }
 .firmaUrunleri .btn {
+  padding: 0.4rem 1.5rem;
+  background: var(--PrimaryColor);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
   align-items: flex-start;
   position: absolute;
+  font-size: 0.8rem;
 }
 .firmaUrunleri .btn:hover {
   background: var(--blackColor);
   color: var(--whiteColor);
+}
+.firmaUrunleri .btn .a {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 480px) {

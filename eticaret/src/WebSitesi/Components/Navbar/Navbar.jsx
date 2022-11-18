@@ -4,8 +4,10 @@ import logo from '../../../Assets/logo.png'
 
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
-import { Link, animateScroll as scroll, } from 'react-scroll'
+import { Link as LinkScroll, animateScroll as scroll, } from 'react-scroll'
 
+
+import { Link as LinkRouter } from 'react-router-dom';
 const Navbar = () => {
   const [active, setActive] = useState('navBar')
   const showNavbar = () => {
@@ -27,44 +29,46 @@ const Navbar = () => {
   window.addEventListener('scroll', addBg);
   return (
     <section className='navBarSection'>
+
+
       <div className={transparent}>
         <div className="logoDiv">
           <a href="#" className='logo'>
             <img
               src={logo}
-            
+              
             />
           </a>
         </div>
         <div className={active}>
           <ul className="navLists flex">
             <li className="navItem">
-            <Link className="navLink" to="home" smooth={true} duration={500}>Home</Link>
-              
+              <LinkScroll className="navLink" to="home" smooth={true} duration={500}>Home</LinkScroll>
             </li>
             <li className="navItem">
-            <Link className="navLink" to="firmaUrunleri" smooth={true} offset={-15} duration={500}>Products</Link>
-          
+              <LinkScroll className="navLink" to="firmaUrunleri" smooth={true} offset={-15} duration={500}>Products</LinkScroll>
             </li>
             <li className="navItem">
-            <Link className="navLink" to="about" smooth={true} offset={-50} duration={500}>About</Link>
-            
-            </li>
-
-            <li className="navItem">
-            <Link className="navLink" to="iletisim" smooth={true} offset={-50} duration={500}>Contact</Link>
-      
+              <LinkScroll className="navLink" to="about" smooth={true} offset={-50} duration={500}>About</LinkScroll>
             </li>
             <li className="navItem">
-              <a href="#" className="navLink">Ecommerce</a>
+              <LinkScroll className="navLink" to="iletisim" smooth={true} offset={-50} duration={500}>Contact</LinkScroll>
+            </li>
+            <li className="navItem">
+              <LinkRouter className="navLink" to="/ecommerce">Ecommerce</LinkRouter>
             </li>
             <div className="headerBtns flex">
-              <button className="btn loginBtn">
-                <a href="#">Login</a>
-              </button>
-              <button className="btn loginBtn">
-                <a href="#">Sing Up</a>
-              </button>
+              <LinkRouter className="btna" to="/login">
+                <button className="btn loginBtn">
+                  Login
+
+                </button>
+              </LinkRouter>
+              <LinkRouter className="btna" to="/singup">
+                <button className="btn loginBtn">
+                  Sing Up
+                </button>
+              </LinkRouter>
             </div>
           </ul>
           <div onClick={removeNavbar} className="closeNavbar"><AiFillCloseCircle className='icon' /></div>
@@ -74,6 +78,7 @@ const Navbar = () => {
         </div>
       </div>
     </section>
+
   )
 }
 

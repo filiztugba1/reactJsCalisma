@@ -3,8 +3,6 @@ import './home.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper";
 import 'swiper/css';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Button } from 'react-bootstrap';
 import img1 from '../../../Assets/OrnekFirmaLogolari/img1.png';
@@ -14,21 +12,20 @@ import img4 from '../../../Assets/OrnekFirmaLogolari/img4.png';
 import img5 from '../../../Assets/OrnekFirmaLogolari/img5.jpeg';
 import img6 from '../../../Assets/OrnekFirmaLogolari/img6.png';
 import img7 from '../../../Assets/OrnekFirmaLogolari/img7.png';
-
+import {Link as LinkRouter} from 'react-router-dom';
 
 function Home() {
-  useEffect(()=>{
-    Aos.init({duration:2000});
-   },[]);
   return (
-    <section className='home'>
+    <section id='home' className='home'>
       <div className="secContainer container">
         <div className="homeText">
-          <h1 data-aos="fade-up" className="title">Build Your Own Site</h1>
-          <p data-aos="fade-up" data-aos-duration="2500" className="subTitle">Explore this platform that allows you to create, develop and design your website the way you want.</p>
-          <button data-aos="fade-up" data-aos-duration="3000" className='btn'>
-            <a href="#">Explore Now</a>
+          <h1  className="title">Build Your Own Site</h1>
+          <p className="subTitle">Explore this platform that allows you to create, develop and design your website the way you want.</p>
+          <LinkRouter className="LoginRouter" to="/login">
+          <button  className='btn'>
+          Explore Now
           </button>
+          </LinkRouter>
         </div>
         <div className="Container py-4 px-4 justify-content-center bg-light">
         <Swiper

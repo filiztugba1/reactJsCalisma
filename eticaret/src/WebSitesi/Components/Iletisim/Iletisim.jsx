@@ -9,7 +9,7 @@ import { Link, animateScroll as scroll, } from 'react-scroll';
 export class Iletisim extends Component {
   render() {
     return (
-      <div className='iletisim'>
+      <div id='iletisim' className='iletisim'>
         <div className="secContainer container grid">
           <div className="logoDiv">
             <div className="iletisimLogo">
