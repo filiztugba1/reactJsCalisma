@@ -1,0 +1,206 @@
+:root {
+  --PrimaryColor: hsl(26,93%,50%);
+  --HoverColor: hsl(26,90%,42%);
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor: hsl(0,0%,18%);
+  --textColor: hsl(240,1%,48%);
+  --whiteColorDeam: hsl(0,0%,93%);
+  --greyBg: hsl(0,0%,96%);
+  --greyText: hsl(190,190%,190%);
+  --inputColor: hsl(330,12%,97%);
+}
+
+.navBarSection .header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+}
+.navBarSection .header .logoDiv .logo {
+  font-weight: 500;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.navBarSection .header .logoDiv .logo img {
+  width: 100px;
+  height: 30px;
+}
+.navBarSection .header .logoDiv .icon {
+  color: var(--PrimaryColor);
+  font-size: 20px;
+  margin-right: 10px;
+}
+.navBarSection .header .navLists .navLink {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.navBarSection .header .navLists .headerBtns .btn {
+  padding: 0.4rem 1.5rem;
+  background: var(--PrimaryColor);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.navBarSection .header .navLists .headerBtns .btn .btna {
+  text-decoration: none;
+}
+.navBarSection .header .navLists .headerBtns .btn:hover {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .navBarSection .header .navBar {
+    background-color: var(--greyBg);
+    position: absolute;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 1rem;
+    width: 100%;
+    top: 0;
+    left: -500%;
+    box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+    transition: 0.5s ease;
+    z-index: 1000;
+  }
+  .navBarSection .header .navBar .navLists {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .navBarSection .header .navBar .navLists .navItem {
+    padding: 1rem 0;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: var(--textColor);
+    text-decoration: none;
+    font-size: 0 0.85rem;
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns {
+    flex-direction: column;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn {
+    margin-top: 1rem;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn .btna {
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn .btna:hover {
+    color: var(--whiteColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn {
+    background: none;
+    border: 1px solid var(--PrimaryColor) !important;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn .btna {
+    color: var(--PrimaryColor);
+    text-decoration: none;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover {
+    background: var(--HoverColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover .btna {
+    color: var(--whiteColor);
+  }
+  .navBarSection .header .navBar .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .closeNavbar:hover .icon {
+    color: var(--HoverColor);
+  }
+  .navBarSection .header .activeNavbar {
+    left: 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .navBarSection .header .navBar .navLists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 10px !important;
+    height: 20px;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: var(--whiteColor);
+    padding: 0 0.3rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .btna {
+    margin-left: 1rem;
+    text-decoration: none;
+  }
+  .navBarSection .header .navBar .navLists .btna .btn {
+    color: var(--whiteColor);
+    font-weight: 500;
+  }
+  .navBarSection .header .navBar .navLists .loginBtn {
+    font-size: 0 0.85rem;
+    background: none;
+    border: 1px solid var(--PrimaryColor);
+    text-decoration: none;
+  }
+  .navBarSection .header .navBar .navLists .loginBtn:hover {
+    background: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .loginBtn:hover .btna {
+    text-decoration: none;
+    color: var(--whiteColor);
+  }
+  .navBarSection .header .closeNavbar {
+    display: none;
+  }
+  .navBarSection .header .toggleNavbar {
+    display: none;
+  }
+}
+@media screen and (min-width: 960px) {
+  .navBarSection .header .logoDiv .logo {
+    padding-left: 50px;
+  }
+  .navBarSection .header .navBar .navLists {
+    padding-right: 50px !important;
+  }
+  .navBarSection .header .navBar .navLists .navItem {
+    padding: 0 0.5rem;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    padding: 0 0.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navBarSection .header .header {
+    padding: 1rem 8.5rem !important;
+  }
+}
+.navBarSection .header .toggleNavbar .icon {
+  font-size: 25px;
+  color: var(--whiteColor);
+}
+.navBarSection .header .toggleNavbar .icon:hover {
+  color: var(--PrimaryColor);
+}
+.navBarSection .activeHeader {
+  background-color: #636161;
+  box-shadow: 0 2px 8px 2px rgba(190, 190, 190, 0.334);
+}/*# sourceMappingURL=navbar.css.map */

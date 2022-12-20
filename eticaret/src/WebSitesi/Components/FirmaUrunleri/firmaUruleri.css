@@ -1,0 +1,213 @@
+:root {
+  --PrimaryColor: hsl(26,93%,50%);
+  --HoverColor: hsl(26,90%,42%);
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor: hsl(0,0%,18%);
+  --textColor: hsl(240,1%,48%);
+  --whiteColorDeam: hsl(0,0%,93%);
+  --greyBg: hsl(0,0%,96%);
+  --greyText: rgb(142, 142, 143);
+  --inputColor: hsl(330,12%,97%);
+}
+
+.firmaUrunleri {
+  padding-top: 15rem;
+}
+.firmaUrunleri .secContainer .secHeader {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.firmaUrunleri .secContainer .secHeader .textDiv .secTitle {
+
+  padding-top: 2rem;
+  color: var(--blackColor);
+  
+  line-height: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 22px;
+  text-align: center;
+}
+.firmaUrunleri .secContainer .secHeader .textDiv p {
+ 
+  font-size: 13px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+.firmaUrunleri .secContainer .secHeader .iconsDiv {
+  gap: 0.5rem;
+}
+.firmaUrunleri .secContainer .secHeader .iconsDiv .icon {
+  padding: 0.5rem;
+  background: rgb(142, 142, 143);
+  border-radius: 50%;
+  font-size: 2.5rem;
+}
+.firmaUrunleri .secContainer .secHeader .iconsDiv .icon:hover {
+  background: var(--blackColor);
+  color: var(--whiteColor);
+}
+.firmaUrunleri .secContainer .secHeader .iconsDiv .leftIcon {
+  background: var(--blackColor);
+  color: var(--whiteColor);
+}
+.firmaUrunleri .secContainer .firmaContent {
+  padding: 2rem 0;
+  gap: 1rem;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destImage {
+ 
+  height: 140px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destImage img {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+ 
+ 
+ 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destImage .overlayInfo {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.846), rgba(0, 0, 0, 0.759));
+  padding: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destImage .overlayInfo h3 {
+  color: var(--whiteColor);
+  font-weight: 600;
+  font-size: 18px !important;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destImage .overlayInfo p {
+  color: var(--whiteColor);
+  opacity: 0.7;
+ 
+  font-size: 11px;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destImage .overlayInfo .icon {
+  position: absolute;
+ 
+  right: 14px;
+  bottom: 10px;
+  padding: 0.5rem;
+  background: var(--PrimaryColor);
+ 
+  font-size: 2.3rem;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destImage .overlayInfo .icon:hover {
+  background: var(--blackColor);
+  border: 1px solid var(--PrimaryColor);
+  color: var(--PrimaryColor);
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter {
+  padding: 1rem;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter .number {
+ 
+ 
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blackColor);
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter .number::after {
+  content: "";
+  position: absolute;
+  background: var(--PrimaryColor);
+  top: 45%;
+  
+  right: -240%;
+  height: 5px;
+  
+  width: 40px;
+  border-radius: 1rem;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter .destText {
+  justify-content: space-between;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter .destText h4 {
+  color: var(--blackColor);
+  
+  font-size: 15px;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination .destFooter .destText h5 {
+  color: var(--blackColor);
+  
+  font-size: 13px;
+}
+.firmaUrunleri .secContainer .firmaContent .singleDestination:hover .overlayInfo {
+  overflow: visible;
+  padding: 1rem 1.5rem;
+  height: 100%;
+}
+.firmaUrunleri .btn {
+  padding: 0.4rem 1.5rem;
+  background: var(--PrimaryColor);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  align-items: flex-start;
+  position: absolute;
+  font-size: 0.8rem;
+}
+.firmaUrunleri .btn:hover {
+  background: var(--blackColor);
+  color: var(--whiteColor);
+}
+.firmaUrunleri .btn .a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+  .firmaUrunleri {
+    padding-top: 10rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .firmaContent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 520px) {
+  .firmaContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .firmaContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 960px) {
+  .firmaContent {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}/*# sourceMappingURL=firmaUruleri.css.map */
