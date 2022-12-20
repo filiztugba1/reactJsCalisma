@@ -1,0 +1,12 @@
+.widgets{
+    display: flex;
+    padding: 20px;
+    margin-top: 80px;
+    gap: 20px;
+}
+.charts{
+    display: flex;
+    padding: 5px 25px;
+
+    gap: 20px;
+}
